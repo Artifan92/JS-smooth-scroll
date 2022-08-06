@@ -7,8 +7,6 @@ function smoothScroll(menuSelector) {
 		event.preventDefault();
 		const target = event.target;
 
-		console.log(document.querySelector(target.dataset.goto));
-
 		if (target.dataset.goto && document.querySelector(target.dataset.goto)) {
 			const gotoBlock = document.querySelector(target.dataset.goto);
 			const gotoBlockValue =
@@ -20,7 +18,6 @@ function smoothScroll(menuSelector) {
 				top: gotoBlockValue,
 				behavior: 'smooth',
 			});
-			e.preventDefault();
 		}
 	}
 
